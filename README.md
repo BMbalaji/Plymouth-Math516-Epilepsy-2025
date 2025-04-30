@@ -1,48 +1,62 @@
 # EEG-Based Epilepsy Detection using Machine Learning
 
+This repository contains the full implementation of a machine learning pipeline developed for EEG-based epilepsy detection. The work was conducted as part of the MSc Health Data Science and Statistics program at the University of Plymouth for the MATH516 module: *Machine Learning and Artificial Intelligence for Healthcare* (2025).
+
+ **All data processing, analysis, modelling, and visualizations were implemented entirely in Python.**
+
+
 ##  Project Overview
-This project is submitted for the MATH516: *Machine Learning and Artificial Intelligence for Healthcare* module, MSc Health Data Science and Statistics at  University of Plymouth (2025).
 
-The objective is to classify subjects into epileptic and non-epileptic groups based on EEG features using both classical machine learning and deep learning models.
+The aim is to classify subjects as *epileptic* or *non-epileptic* based on engineered EEG features using both classical machine learning and deep learning techniques.
 
-##  Repository Structure
+The pipeline includes:
+- Data cleaning and standardization
+- Exploratory Data Analysis (EDA)
+- Multiple feature selection strategies
+- Training of classical ML models (Logistic Regression, Random Forest, SVM, KNN)
+- Deep learning with a Multi-Layer Perceptron (Keras)
+- Model evaluation and visualization
 
-- `notebooks/`: Contains the final Jupyter Notebook (`eeg_epilepsy_detection_ml.ipynb`)
-- `plots/`: Saved plots (ROC curves, feature importance charts, heatmaps, etc.)
-- `data/`: Dataset (`Epileptic_featured_data.csv`)
+##  Models Implemented
 
-##  Tools and Libraries Used
-
-- Python 3.11
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
-- seaborn
-- tensorflow / keras
-
-##  Models Developed
-
-- Logistic Regression
-- Random Forest Classifier
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-- Deep Learning Neural Network (MLP)
+- Logistic Regression  
+- Random Forest  
+- Support Vector Machine (SVM)  
+- K-Nearest Neighbors (KNN)  
+- Deep Neural Network (Keras)
 
 ##  Evaluation Metrics
 
-- Accuracy
-- Sensitivity (Recall)
-- Specificity
-- Precision
-- F1-Score
-- AUC (Area Under the ROC Curve)
+- Accuracy  
+- Precision, Recall (Sensitivity), Specificity  
+- F1 Score  
+- Area Under the Curve (AUC)  
+- ROC Curves & Confusion Matrices
 
 ##  Key Highlights
 
-- Data preprocessing, feature scaling and normalization
-- Exploratory Data Analysis (EDA)
-- Feature selection and importance analysis (Random Forest, RFE, Embedded methods)
-- Fold change analysis between epileptic and non-epileptic subjects
-- ROC curve comparisons between ML and Deep Learning models
-- Performance evaluation and model comparison
+- Balanced dataset (198 samples, 99 per class)
+- 40 EEG-derived features across Delta, Theta, Alpha, Beta, Gamma bands
+- Fold-change analysis and correlation heatmaps
+- Feature selection using:
+  - Random Forest importance
+  - Recursive Feature Elimination (RFE)
+  - Permutation Importance
+  - Correlation-based ranking
+- Minimal feature set with comparable performance (AUC > 0.85)
+
+##  Results Summary
+
+| Model                  | Accuracy | F1 Score | AUC  |
+|------------------------|----------|----------|------|
+| Random Forest          | 100%     | 1.00     | 1.00 |
+| Support Vector Machine | 100%     | 1.00     | 1.00 |
+| Logistic Regression    | 97.5%    | 0.97     | 1.00 |
+| K-Nearest Neighbors    | 95.0%    | 0.95     | 0.99 |
+| Deep Learning (MLP)    | 98.0%    | 0.97     | 1.00 |
+
+
+## Conclusion
+
+This project successfully demonstrates that combining engineered EEG features with classical machine learning and deep learning models can deliver highly accurate, interpretable, and scalable solutions for epilepsy detection.
+
