@@ -1,7 +1,7 @@
 # EEG-Based Epilepsy Detection using Machine Learning
 
 ##  Project Overview
-This project is submitted for the MATH516: *Machine Learning and Artificial Intelligence for Healthcare* module, MSc Health Data Science and Statistics at Plymouth University (2025).
+This project is submitted for the MATH516: *Machine Learning and Artificial Intelligence for Healthcare* module, MSc Health Data Science and Statistics at  University of Plymouth (2025).
 
 The objective is to classify subjects into epileptic and non-epileptic groups based on EEG features using both classical machine learning and deep learning models.
 
